@@ -7,29 +7,34 @@
 
         </div>
         <el-menu
-          default-active="2"
+          :collapse="isCollapse"
+          :router="true"
           class="el-menu-admin"
           @open="handleOpen"
           @close="handleClose"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
-          :collapse="isCollapse"
+          default-active='2'
         >
-          <el-submenu index="1">
+          <el-submenu index='1'>
+
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>用户管理</span>
             </template>
+
             <el-menu-item-group>
-              <el-menu-item index="1-1">
+              <el-menu-item index="/user">
               <i class="el-icon-menu"></i>
                   用户列表
               </el-menu-item>
             </el-menu-item-group>
+
           </el-submenu>
 
         </el-menu>
+
       </el-aside>
       <el-container>
 
@@ -50,6 +55,7 @@
         <!-- 内容区域  -->
         <el-main>
 
+           <!-- 组件展示 -->
            <router-view></router-view>
 
         </el-main>

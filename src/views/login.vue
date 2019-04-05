@@ -20,9 +20,10 @@
           placeholder="密码"
           prefix-icon="myicon myicon-key"
           type="password"
+          @keydown.native.enter="loginSubmit('form')"
         ></el-input>
       </el-form-item>
-      <el-form-item>
+      <el-form-item >
       <el-button type="primary" class="login-btn" @click="loginSubmit('form')">登陆</el-button>
       </el-form-item>
     </el-form>
